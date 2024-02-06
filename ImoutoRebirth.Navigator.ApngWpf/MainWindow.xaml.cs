@@ -23,6 +23,10 @@ namespace ImoutoRebirth.Navigator.ApngWpf
         public MainWindow()
         {
             InitializeComponent();
+
+            ApngPlayer.EndBehavoir = 1;
+            ApngPlayer.RepeatPlay = true;
+            ApngPlayer.Ratio = 2;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -36,7 +40,6 @@ namespace ImoutoRebirth.Navigator.ApngWpf
             };
 
             var next = (Array.IndexOf(sources, ApngPlayer.Source) + 1) % 4;
-
             ApngPlayer.Source = sources[next];
         }
     }
